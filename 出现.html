@@ -40,7 +40,10 @@
 	let boil = document.querySelector(".boil");
 	boil.style.display = "none";
 	window.onscroll = function(){
-		if(window.scrollY>100){
+		var scrollTop = document.documentElement.
+			scrollTop||document.body.scrollTop||window.
+			scrollY||window.pageYOffset;
+		if(scrollTop>100){
 			boil.style.display="block";
 		}else{
 			boil.style.display="none";
@@ -49,5 +52,4 @@
 	boil.onclick = function(){
 		window.scrollTo(0,0);
 	}
-
 </script>
